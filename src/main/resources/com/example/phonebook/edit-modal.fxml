@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.phonebook.EditModalController" style="-fx-background-color: #110F1C;">
+    <padding>
+        <Insets top="50" right="50" bottom="50" left="50"/>
+    </padding>
+
+    <rowConstraints>
+        <RowConstraints prefHeight="40.0"/>
+        <RowConstraints prefHeight="40.0"/>
+        <RowConstraints prefHeight="40.0"/>
+    </rowConstraints>
+
+    <Label text="ПІП:" GridPane.columnIndex="0" GridPane.rowIndex="0" textFill="#D60884">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-background-color: #110F1C; -fx-border-color: D60884; -fx-border-width: 2px; -fx-border-radius: 7px;"/>
+
+    <Label text="Телефон:" GridPane.columnIndex="0" GridPane.rowIndex="1" textFill="#D60884">
+        <font>
+            <Font name="System Bold" size="14.0" />
+        </font>
+    </Label>
+    <TextField fx:id="phoneField" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-background-color: #110F1C; -fx-border-color: D60884; -fx-border-width: 2px; -fx-border-radius: 7px;"/>
+
+    <HBox alignment="CENTER" spacing="10" GridPane.columnSpan="2" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button fx:id="okBtn" onAction="#okButtonHandler" text="ОК" style="-fx-background-color: #D60884;" textFill="#110f1c">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Button fx:id="cancelBtn" onAction="#cancelButtonHandler" text="Відміна" style="-fx-background-color: #D60884;" textFill="#110f1c">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+    </HBox>
+</GridPane>
